@@ -1,11 +1,38 @@
-[ req ]
+[ca]
+default_ca = ca_default
+
+[ca_default]
+dir = ./ca
+certs = $dir
+new_certs_dir = .
+database = $dir/ca.db.index
+serial = $dir/ca.db.serial
+RANDFILE = $dir/ca.db.rand
+certificate = rootca.pem
+private_key = rootca.key
+default_days = 3650
+default_crl_days = 30
+default_md = md5
+preserve = no
+policy = generic_policy
+
+[generic_policy]
+countryName = optional
+stateOrProvinceName = optional
+localityName = optional
+organizationName = optional
+organizationalUnitName = optional
+commonName = optional
+emailAddress = optional
+
+[req]
 default_bits = 4096
 default_md = sha512
 prompt = no
 encrypt_key = no
 distinguished_name = dn
 
-[ dn ]
+[dn]
 C = AT
 ST = Vorarlberg
 L = Dornbirn
