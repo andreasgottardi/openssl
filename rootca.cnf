@@ -15,6 +15,7 @@ default_crl_days = 30
 default_md = md5
 preserve = no
 policy = generic_policy
+copy_extensions = copy
 
 [generic_policy]
 countryName = optional
