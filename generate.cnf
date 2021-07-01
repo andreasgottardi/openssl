@@ -1,0 +1,15 @@
+[ req ]
+default_bits = 4096
+default_md = sha512
+prompt = no
+encrypt_key = no
+distinguished_name = dn
+
+[ dn ]
+C = AT
+ST = Vorarlberg
+L = Dornbirn
+O = Goa Systems
+OU = IT department
+CN = Andreas Gottardi
+emailAddress = andreas.gottardi@goa.systems
