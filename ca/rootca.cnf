@@ -4,12 +4,12 @@ default_ca = ca_default
 [ca_default]
 dir = ./ca
 certs = $dir
-new_certs_dir = .
+new_certs_dir = $dir/certs
 database = $dir/ca.db.index
 serial = $dir/ca.db.serial
 RANDFILE = $dir/ca.db.rand
-certificate = rootca.pem
-private_key = rootca.key
+certificate = $dir/rootca.crt
+private_key = $dir/rootca.key
 default_days = 3650
 default_crl_days = 30
 default_md = md5
