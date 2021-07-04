@@ -1,4 +1,9 @@
-$OpenSSL = "openssl.exe"
+[CmdletBinding()]
+param (
+	[Parameter()]
+	[String]
+	$OpenSSL = "openssl.exe"
+)
 
 <#
 	The following three lines generate the root certificate and key. This is then used to sign server and client certificates.
